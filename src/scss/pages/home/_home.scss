@@ -1,0 +1,43 @@
+#home {
+    @extend %parent-footer;
+
+    #clients {
+
+        article {
+
+            /* code block below works only in the article selector */
+            $imgWidth: 135px;
+            $imgPerRow: 6;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            max-width: ($imgWidth * $imgPerRow);
+            margin: 0 auto; // centering
+            padding-bottom: 40px;
+            
+            .client-logo-container {
+
+                margin: 1.5rem 0;
+                
+                img {
+                    width: 100%;
+                    max-width: $imgWidth;
+                }
+            }
+        }
+    }
+
+    #interaction {
+        margin: 0 auto;
+        text-align: center;
+        
+        h1 {
+            color: gold;
+        }
+        
+        button {
+            padding: 0.3rem 2rem;
+            margin-top: 1rem;
+        }
+    }
+}
